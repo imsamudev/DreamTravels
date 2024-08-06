@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --1-white: #f2f2f2;
+  --2-black: #212121;
+}
+/* MOBILE FIRST DESIGN */
+@media (min-width: 769px) {
+}
+@media (min-width: 1366px) {
+}
