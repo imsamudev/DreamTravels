@@ -1,19 +1,132 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+/* FONTS */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "karla", sans-serif;
 }
+/* RESET */
+
 :root {
   --white: #f2f2f2;
   --black: #212121;
-  --indigo-dye: #084b83ff;
-  --aero: #42bfddff;
-  --mint-green: #bbe6e4ff;
-  --antiflash-white: #f0f6f6ff;
+  --indigo-dye: #084b83;
+  --aero: #42bfdd;
+  --mint-green: #bbe6e4;
+  --antiflash-white: #f0f6f6;
 }
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  background: linear-gradient(135deg, var(--mint-green), var(--indigo-dye));
+  box-shadow: 0rem 0.15rem 0.5rem var(--black);
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+.navbar-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: var(--indigo-dye);
+  background: transparent;
+  border: none;
+  filter: drop-shadow(0rem 0.15rem 0.1rem var(--black));
+  cursor: pointer;
+}
+.navbar-toggle img {
+  width: 100%;
+  height: auto;
+}
+.logo {
+  filter: drop-shadow(-0.1rem 0.1rem 0.2rem var(--black));
+  display: none;
+}
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 50%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+.navbar-links.active {
+  max-height: 18.75rem;
+}
+.navbar-links li {
+  padding: 1rem 0;
+}
+.navbar-links a {
+  color: var(--antiflash-white);
+  font-size: 2rem;
+  font-weight: 400;
+  text-shadow: 0.15rem 0.15rem 0.1rem var(--indigo-dye);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.navbar-links a:hover {
+  color: var(--aero);
+}
+section {
+  height: 100vh;
+}
+/* NAVBAR CLOSED */
 
 /* MOBILE FIRST DESIGN */
 @media (min-width: 769px) {
+  /* NAVBAR */
+  .logo {
+    display: flex;
+    height: 5rem;
+    padding: 0.2rem;
+  }
+  .navbar {
+    flex-direction: row;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  .navbar-links {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+    max-height: none;
+    overflow: visible;
+    transition: none;
+  }
+  .navbar.scrolled {
+    background: var(--mint-green);
+    opacity: 0.3;
+    box-shadow: none;
+  }
+  .navbar.scrolled:hover {
+    opacity: 1;
+  }
+  .navbar-links a {
+    font-size: 1.5rem;
+  }
+  .navbar.scrolled .navbar-links a {
+    color: var(--black);
+    text-shadow: none;
+  }
+  .navbar.scrolled .navbar-links a:hover {
+    color: var(--aero);
+    border-radius: 1rem;
+  }
 }
+/* NAVBAR CLOSED */
+
 @media (min-width: 1366px) {
 }

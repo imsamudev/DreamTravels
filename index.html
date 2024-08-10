@@ -12,12 +12,28 @@
   <link rel="icon" href="./src/assets/img/DreamTravels_ICO/android-chrome-512x512.png" sizes="512x512" type="image/png">
 
   <title> Dream Travels | Tu viaje de ensueño </title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="src/styles/main.css">
 </head>
 
 <body>
-  <img src="./src/assets/img/logo/logo.svg" alt="logo Dream Travels">
-  <script src="main"></script>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img class="logo" src="./src/assets/img/logo/logo.svg" alt="logo Dream Travels">
+      </div>
+      <button class="navbar-toggle" id="navbarToggle" alt="navbar toggle" aria-label="desplegar menú de navegación"><i
+          class='bx bx-menu'></i></button>
+      <ul class="navbar-links" id="navbarLinks">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#section1">Sección 1</a></li>
+        <li><a href="#section2">Sección 2</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script src="./src/scripts/main.js"></script>
 </body>
 
 </html>
