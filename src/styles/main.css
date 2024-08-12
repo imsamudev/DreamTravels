@@ -87,7 +87,7 @@ section {
 
 /* SLIDER */
 h1 {
-  font-size: 4rem;
+  font-size: 2.2rem;
   font-weight: 600;
   color: #fff;
 }
@@ -102,7 +102,7 @@ h2 {
 .title-container {
   position: absolute;
   z-index: 1;
-  width: 65%;
+  width: 85%;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -205,6 +205,18 @@ h2 {
   .navbar.scrolled .navbar-links a:hover {
     color: var(--aero);
     border-radius: 1rem;
+  }
+
+  /* SLIDER */
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  .title-container {
+    width: 65%;
   }
 }
 /* NAVBAR CLOSED */
