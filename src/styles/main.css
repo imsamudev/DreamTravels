@@ -19,16 +19,25 @@
   --mint-green: #bbe6e4;
   --antiflash-white: #f0f6f6;
 }
+body {
+  background: rgb(242, 242, 242);
+  background: linear-gradient(
+    215deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(240, 246, 246, 1) 51%,
+    rgba(187, 230, 228, 1) 100%
+  );
+}
 /* NAVBAR */
 .navbar {
   position: fixed;
   z-index: 1;
   background: linear-gradient(135deg, var(--mint-green), var(--indigo-dye));
   box-shadow: 0rem 0.15rem 0.5rem var(--black);
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out,
@@ -164,15 +173,15 @@ h2 {
 }
 /* SLIDER CLOSED */
 
-
 /* MOBILE FIRST DESIGN */
 @media (min-width: 769px) {
   /* NAVBAR */
   .logo {
-    display: flex;
-    height: 5rem;
-    padding: 0.2rem;
+    display: block;
+    height: 3.5rem;
+    padding-left: 1rem;
   }
+
   .navbar {
     flex-direction: row;
   }
@@ -182,7 +191,7 @@ h2 {
   .navbar-links {
     flex-direction: row;
     justify-content: space-evenly;
-    width: 40%;
+    width: 60%;
     max-height: none;
     overflow: visible;
     transition: none;
