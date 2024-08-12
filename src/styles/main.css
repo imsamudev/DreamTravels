@@ -19,6 +19,15 @@
   --mint-green: #bbe6e4;
   --antiflash-white: #f0f6f6;
 }
+body {
+  background: rgb(242, 242, 242);
+  background: linear-gradient(
+    215deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(240, 246, 246, 1) 51%,
+    rgba(187, 230, 228, 1) 100%
+  );
+}
 /* NAVBAR */
 .navbar {
   position: fixed;
