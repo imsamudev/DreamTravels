@@ -120,6 +120,9 @@ h2 {
   border-radius: 15px;
   padding: 1px 20px 16px 20px;
 }
+.title-span {
+  color: var(--mint-green);
+}
 .slider {
   width: 100%;
   min-width: 100vw;
