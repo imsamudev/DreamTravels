@@ -18,16 +18,11 @@
   --indigo-dye: #084b83;
   --aero: #42bfdd;
   --mint-green: #bbe6e4;
-  --antiflash-white: #f0f6f6;
+  --azure-mist: #e0f0f0;
 }
 body {
   background: rgb(242, 242, 242);
-  background: linear-gradient(
-    215deg,
-    rgba(242, 242, 242, 1) 0%,
-    rgba(240, 246, 246, 1) 51%,
-    rgba(187, 230, 228, 1) 100%
-  );
+  background: linear-gradient(215deg, #f2f2f2 0%, #e0f0f0 51%, #bbe6e4 100%);
   overflow-x: hidden;
 }
 /* NAVBAR */
@@ -81,7 +76,7 @@ body {
   padding: 1rem 0;
 }
 .navbar-links a {
-  color: var(--antiflash-white);
+  color: var(--azure-mist);
   font-size: 2rem;
   font-weight: 400;
   text-shadow: 0.15rem 0.15rem 0.1rem var(--indigo-dye);
@@ -174,11 +169,17 @@ h2 {
   width: 30px;
 }
 /* SLIDER CLOSED */
-section {
+section,
+footer {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+footer {
+  height: 40vh;
+  justify-content: space-between;
 }
 /* MOBILE FIRST DESIGN */
 @media (min-width: 769px) {
@@ -222,6 +223,7 @@ section {
     color: var(--aero);
     border-radius: 1rem;
   }
+  /* NAVBAR CLOSED */
 
   /* SLIDER */
   h1 {
@@ -235,7 +237,5 @@ section {
     width: 65%;
   }
 }
-/* NAVBAR CLOSED */
-
 @media (min-width: 1366px) {
 }
