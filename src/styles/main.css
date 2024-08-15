@@ -20,6 +20,8 @@
   --mint-green: #bbe6e4;
   --azure-mist: #e0f0f0;
 }
+
+/* MOBILE FIRST DESIGN */
 body {
   background: rgb(242, 242, 242);
   background: linear-gradient(215deg, #f2f2f2 0%, #e0f0f0 51%, #bbe6e4 100%);
@@ -169,6 +171,18 @@ h2 {
   width: 30px;
 }
 /* SLIDER CLOSED */
+
+/* RESERVE */
+.reserve {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  padding: 30px;
+  text-align: center;
+}
+/* RESERVE CLOSED */
+
 section,
 footer {
   height: 100vh;
@@ -181,7 +195,8 @@ footer {
   height: 40vh;
   justify-content: space-between;
 }
-/* MOBILE FIRST DESIGN */
+
+/* TABLET */
 @media (min-width: 769px) {
   /* NAVBAR */
   .logo {
@@ -237,5 +252,7 @@ footer {
     width: 65%;
   }
 }
+
+/* DESKTOP */
 @media (min-width: 1366px) {
 }
