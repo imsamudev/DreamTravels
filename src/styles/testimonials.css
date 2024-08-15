@@ -1,0 +1,64 @@
+#testimonials {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--mint-green), var(--azure-mist));
+  box-shadow: 0rem 0.15rem 0.5rem var(--black);
+}
+
+.testimonials-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+  padding: 2rem;
+  min-width: 100%;
+  text-align: center;
+}
+.testimonial img {
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.rating-testimonial {
+  margin: 1rem 0rem;
+  font-size: 2rem;
+  color: var(--white);
+  /* -webkit-text-stroke: 0.1rem var(--black); */
+  filter: drop-shadow(0rem 0.1rem 0.1rem var(--black));
+}
+.testimonial h4,
+p {
+  font-size: 1.5rem;
+}
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 6rem;
+  color: var(--white);
+  filter: drop-shadow(0rem 0.1rem 0.1rem var(--black));
+  opacity: 0.6;
+  cursor: pointer;
+  display: none;
+}
+button.prev {
+  left: 20%;
+}
+button.next {
+  right: 20%;
+}
+@media (min-width: 769px) {
+  button.prev,
+  button.next {
+    display: block;
+  }
+}
