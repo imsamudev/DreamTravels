@@ -284,6 +284,7 @@ h2 {
 .product-short-description {
   width: 100%;
   height: 20px;
+  font-size: 1rem;
   line-height: 20px;
   overflow: hidden;
   opacity: 0.5;
@@ -402,8 +403,38 @@ footer {
   .title-container {
     width: 65%;
   }
+
+  /* RESERVE */
+  .title-container {
+    width: 65%;
+  }
+  .product-card {
+    flex: 0 0 calc(33.33% - 30px); /* Ajusta el ancho para 3 card*/
+  }
+  .product-container {
+    margin: 0 70px;
+  }
+  .reserve-title {
+    margin-top: 100px;
+  }
+  .reserve {
+    padding: 20px;
+  }
 }
 
 /* DESKTOP */
 @media (min-width: 1366px) {
+  /* RESERVE */
+  .product-container {
+    margin: 0 100px;
+  }
+  .product-card {
+    flex: 0 0 calc(20% - 35px); /* Ajusta el ancho para que 5 tarjetas */
+  }
+  .reserve {
+    text-align: left;
+  }
+  .reserve-title {
+    margin-top: 100px;
+  }
 }
