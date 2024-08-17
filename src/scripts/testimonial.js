@@ -11,14 +11,9 @@ function updateSlider() {
 }
 
 function updateNavigationButtons() {
-  if (window.innerWidth >= 769) {
-    prevButton.style.display = currentIndex === 0 ? "none" : "block";
-    nextButton.style.display =
-      currentIndex === testimonials.length - 1 ? "none" : "block";
-  } else {
-    prevButton.style.display = "none";
-    nextButton.style.display = "none";
-  }
+  prevButton.style.display = currentIndex === 0 ? "none" : "block";
+  nextButton.style.display =
+    currentIndex === testimonials.length - 1 ? "none" : "block";
 }
 
 nextButton.addEventListener("click", () => {
