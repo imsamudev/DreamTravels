@@ -25,12 +25,11 @@
 body {
   background: rgb(242, 242, 242);
   background: linear-gradient(215deg, #f2f2f2 0%, #e0f0f0 51%, #bbe6e4 100%);
-  overflow-x: hidden;
 }
 /* NAVBAR */
 .navbar {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   background: linear-gradient(135deg, var(--mint-green), var(--indigo-dye));
   box-shadow: 0rem 0.15rem 0.5rem var(--black);
   padding: 0.5rem;
@@ -212,7 +211,7 @@ h2 {
   overflow-x: auto;
   scroll-behavior: smooth;
   margin: 0 60px;
-  padding: 0 ;
+  padding: 0;
   scroll-snap-type: x mandatory;
 }
 .product-container::-webkit-scrollbar {
@@ -220,7 +219,7 @@ h2 {
 }
 .product-card {
   flex: 0 0 auto;
-  width: calc(100%); 
+  width: calc(100%);
   height: 450px;
   margin: 0 20px;
   scroll-snap-align: start;
