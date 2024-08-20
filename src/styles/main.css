@@ -460,7 +460,7 @@ input #adults {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 3rem 2rem 0 2rem;
+  margin: 2rem 2rem 0 2rem;
 }
 .contact-info {
   z-index: 1;
@@ -515,6 +515,7 @@ input #adults {
   margin: 1rem 0;
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 .contact-subtitle span {
   color: var(--indigo-dye);
@@ -534,6 +535,7 @@ input #adults {
   align-items: center;
   font-size: 1rem;
   margin-top: 0.5rem;
+  text-align: center;
 }
 .info-detail {
   margin-bottom: 0.5rem;
@@ -542,6 +544,7 @@ input #adults {
 .social {
   margin: 1rem 1rem 2rem;
   text-align: center;
+  display: none;
 }
 .social a {
   text-decoration: none;
@@ -827,16 +830,19 @@ section {
   .contact-subtitle {
     margin-left: 1rem;
     margin-bottom: 0.5rem;
+    text-align: left;
   }
   .contact-desc {
     display: block;
   }
   .contact-info-detail {
     align-items: normal;
+    text-align: left;
   }
   .social {
     margin: 2rem 1rem 2rem;
     text-align: left;
+    display: block;
   }
   .contact-form form {
     align-items: normal;

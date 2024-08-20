@@ -235,3 +235,106 @@ function closeModalFunc() {
     }, 500);
   }
 }
+
+
+// Validacion de formulario
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  let valid = true;
+
+  // Validación de nombre
+  const nameField = document.getElementById('name');
+  const nameError = document.getElementById('nameError');
+  const nameValue = nameField.value.trim();
+
+  if (nameValue === "") {
+      nameError.textContent = "Completar nombre";
+      nameError.style.display = "block";
+      valid = false;
+  } else if (!nameValue.includes(" ")) {
+      nameError.textContent = "Completar nombre completo";
+      nameError.style.display = "block";
+      valid = false;
+  } else {
+      nameError.style.display = "none";
+  }
+
+  // Validación de email
+  const emailField = document.getElementById('email');
+  const emailError = document.getElementById('emailError');
+  const emailValue = emailField.value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailValue === "") {
+      emailError.textContent = "Completar email";
+      emailError.style.display = "block";
+      valid = false;
+  } else if (!emailPattern.test(emailValue)) {
+      emailError.textContent = "Escribir un email válido";
+      emailError.style.display = "block";
+      valid = false;
+  } else {
+      emailError.style.display = "none";
+  }
+
+  // Validación de asunto
+  const subjectField = document.getElementById('subject');
+  const subjectError = document.getElementById('subjectError');
+  if (subjectField.value.trim() === "") {
+      subjectError.textContent = "Completar asunto";
+      subjectError.style.display = "block";
+      valid = false;
+  } else {
+      subjectError.style.display = "none";
+  }
+
+  // Validación de mensaje
+  const messageField = document.getElementById('message');
+  const messageError = document.getElementById('messageError');
+  const messageValue = messageField.value.trim();
+
+  if (messageValue === "") {
+      messageError.textContent = "Completar mensaje";
+      messageError.style.display = "block";
+      valid = false;
+  } else if (messageValue.length > 100) {
+      messageError.textContent = "Máximo 100 caracteres";
+      messageError.style.display = "block";
+      valid = false;
+  } else {
+      messageError.style.display = "none";
+  }
+
+  if (valid) {
+      alert("El formulario fue enviado");
+      event.target.submit();
+  }
+});
+
+// Contador de caracter
+const messageField = document.getElementById('message');
+const charCount = document.getElementById('charCount');
+
+messageField.addEventListener('input', function () {
+  const length = messageField.value.length;
+  charCount.textContent = `${length}/100`;
+
+  if (length === 0 || length >= 100) {
+      charCount.style.display = "none";
+  } else {
+      charCount.style.display = "block";
+  }
+});
+// contador al cargar la página
+window.addEventListener('load', function () {
+  const length = messageField.value.length;
+  charCount.textContent = `${length}/100`;
+
+  if (length === 0 || length >= 100) {
+      charCount.style.display = "none";
+  } else {
+      charCount.style.display = "block";
+  }
+});
+
