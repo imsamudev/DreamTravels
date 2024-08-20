@@ -282,6 +282,7 @@ h2 {
 .product-destination {
   color: var(--black);
   text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 .product-short-description {
   width: 100%;
@@ -291,6 +292,7 @@ h2 {
   opacity: 0.5;
   text-transform: capitalize;
   margin: 5px 0;
+  display: none;
 }
 .price {
   color: var(--indigo-dye);
@@ -355,8 +357,8 @@ h2 {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 60%;
-  top: 15%;
+  width: 70%;
+  top: 10%;
   transition: opacity 0.5s ease;
   opacity: 0;
   border-radius: 5px;
@@ -400,6 +402,7 @@ h2 {
   margin: 0;
 }
 .modal-form form input {
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 .modal-body {
@@ -415,9 +418,15 @@ h2 {
   cursor: pointer;
   color: gray;
 }
-#adults {
-  width: 1rem;
+.adults-container {
   text-align: center;
+}
+.adults-container button {
+  width: 1rem;
+  font-weight: bold;
+}
+input #adults {
+  width: 1rem;
 }
 .modal-body {
   text-align: center;
@@ -573,14 +582,13 @@ section {
   }
   /* NAVBAR CLOSED */
 
-  /* SLIDER */
+  /* RESERVE */
   h1 {
     font-size: 4rem;
   }
   h2 {
     font-size: 0.9rem;
   }
-
   .title-container {
     width: 65%;
   }
@@ -633,6 +641,8 @@ section {
     margin-top: 0.5rem;
     padding: 10px 50px;
   }
+
+
   footer,
   .website {
     font-size: 1.2rem;
@@ -675,10 +685,12 @@ section {
   /* MODAL */
   .modal-content {
     top: 25%;
+    height: 40%;
   }
   .modal-header {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 60% 40%;
+    height: 70%;
     gap: 1rem;
   }
   .modal-vid {

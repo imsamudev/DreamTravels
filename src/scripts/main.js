@@ -148,10 +148,10 @@ document.querySelectorAll(".card-btn").forEach((btn, i) => {
     const productCard = btn.closest(".product-card");
 
     const description = productCard.querySelector(".product-info .product-short-description").innerText;
-    const videoSrc = productCard.querySelector(".product-vid video").getAttribute("src");
+    const videoSrc = productCard.querySelector(".product-vid iframe").getAttribute("src");
 
     const modal = document.getElementById("myModal");
-    const modalVid = modal.querySelector("#modal-vid video");
+    const modalVid = modal.querySelector("#modal-vid iframe");
     const modalDescription = modal.querySelector("#modal-description");
 
     modalVid.setAttribute("src", videoSrc);
