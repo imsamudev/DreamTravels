@@ -78,7 +78,7 @@ body {
 }
 .navbar-links a {
   color: var(--azure-mist);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-shadow: 0.15rem 0.15rem 0.1rem var(--indigo-dye);
   text-decoration: none;
@@ -609,7 +609,6 @@ input #adults {
 }
 /* FIN CONTACT */
 
-
 /* FOOTER */
 
 footer {
@@ -752,11 +751,11 @@ section {
   .title-container {
     width: 65%;
   }
-    /* FIN SLIDER */
+  /* FIN SLIDER */
 
-    /* RESERVE */
+  /* RESERVE */
   .product-card {
-    flex: 0 0 calc(33.33% - 30px); 
+    flex: 0 0 calc(33.33% - 30px);
   }
   .product-container {
     margin: 0 70px;
@@ -878,7 +877,6 @@ section {
 
 /* DESKTOP */
 @media (min-width: 1366px) {
-
   /* RESERVE */
   .product-container {
     margin: 0 100px;
