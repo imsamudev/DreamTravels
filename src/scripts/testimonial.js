@@ -4,6 +4,7 @@ const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
 let currentIndex = 0;
+const swipeThreshold = 50;
 
 function updateSlider() {
   container.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -44,14 +45,16 @@ function handleTouchMove(evt) {
 
   let xDiff = xStart - evt.touches[0].clientX;
 
-  if (xDiff > 0 && currentIndex < testimonials.length - 1) {
+  if (xDiff > swipeThreshold && currentIndex < testimonials.length - 1) {
     currentIndex++;
-  } else if (xDiff < 0 && currentIndex > 0) {
+  } else if (xDiff < -swipeThreshold && currentIndex > 0) {
     currentIndex--;
   }
 
-  updateSlider();
-  xStart = null;
+  if (Math.abs(xDiff) > swipeThreshold) {
+    updateSlider();
+    xStart = null;
+  }
 }
 
 updateSlider();
