@@ -148,7 +148,7 @@ document.querySelectorAll(".card-btn").forEach((btn, i) => {
     const productCard = btn.closest(".product-card");
 
     const description = productCard.querySelector(".product-info .product-short-description").innerText;
-    const videoSrc = productCard.querySelector(".product-vid iframe").getAttribute("src");
+    const videoSrc = productCard.querySelector(".product-vid lite-youtube").getAttribute("videoid");
 
     const modal = document.getElementById("myModal");
     const modalVid = modal.querySelector("#modal-vid iframe");
@@ -173,7 +173,7 @@ document.querySelector(".close").addEventListener("click", function() {
   modal.querySelector(".modal-content").style.opacity = "0";
   setTimeout(() => {
     modal.style.display = "none";
-    modal.querySelector("#modal-vid video").setAttribute("src", "");
+    modal.querySelector("#modal-vid lite-youtube").setAttribute("videoid", "");
   }, 500);
 });
 
@@ -185,7 +185,7 @@ window.addEventListener("click", function(event) {
     modal.querySelector(".modal-content").style.opacity = "0";
     setTimeout(() => {
       modal.style.display = "none";
-      modal.querySelector("#modal-vid video").setAttribute("src", "");
+      modal.querySelector("#modal-vid lite-youtube").setAttribute("videoid", "");
     }, 500);
   }
 });
@@ -231,7 +231,7 @@ function closeModalFunc() {
     modal.querySelector(".modal-content").style.opacity = "0";
     setTimeout(() => {
       modal.style.display = "none";
-      modal.querySelector("#modal-vid video").setAttribute("src", "");
+      modal.querySelector("#modal-vid lite-youtube").setAttribute("videoid", "");
     }, 500);
   }
 }

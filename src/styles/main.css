@@ -400,6 +400,7 @@ h2 {
 }
 .modal-form form label {
   margin: 0;
+  font-size: 0.8rem;
 }
 .modal-form form input {
   text-align: center;
@@ -433,7 +434,7 @@ input #adults {
 }
 .reserve-btn {
   margin-top: 0.5rem;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   background-color: var(--indigo-dye);
   color: white;
   border: none;
@@ -528,6 +529,7 @@ input #adults {
   font-weight: bold;
   width: 80%;
   display: none;
+  user-select: none;
 }
 .contact-info-detail {
   display: flex;
@@ -777,11 +779,14 @@ section {
 
   /* MODAL */
   .modal-content {
-    top: 35%;
+    top: 25%;
+    width: 95%;
+    height: 45%;
   }
   .modal-header {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 70% 30%;
+    height: 80%;
     gap: 1rem;
   }
   .modal-vid {
@@ -790,9 +795,14 @@ section {
   #modal-description {
     font-size: 0.7rem;
   }
+  .modal-form form {
+    flex-direction: row;
+  }
   .modal-form form label {
-    font-size: 0.8rem;
-    margin: 0 0;
+    margin: 0 1rem;
+  }
+  .modal-form form input {
+    margin-bottom: 0;
   }
   .close {
     font-size: 1.6rem;
@@ -850,6 +860,20 @@ section {
     width: 15rem;
     margin-bottom: 0.6rem;
   }
+  .contact-form form label {
+    position: relative;
+  }
+  .contact-form form label::after {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 2px;
+    background-color: var(--black);
+    bottom: -2px;
+    left: 0.5%;
+    opacity: 0.5;
+    z-index: 10;
+  }
   .contact-form form textarea {
     height: 5rem;
   }
@@ -901,29 +925,14 @@ section {
 
   /* MODAL */
   .modal-content {
-    top: 25%;
-    height: 40%;
-  }
-  .modal-header {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    height: 70%;
-    gap: 1rem;
+    width: 70%;
+    height: 60%;
   }
   .modal-vid {
     margin: 0;
   }
   #modal-description {
     font-size: 0.9rem;
-  }
-  .modal-form form {
-    flex-direction: row;
-  }
-  .modal-form form label {
-    margin: 0 1rem;
-  }
-  .modal-form form input {
-    margin-bottom: 0;
   }
   .close {
     font-size: 2rem;
@@ -958,6 +967,9 @@ section {
     font-size: 2rem;
     font-weight: bold;
   }
+  .contact-desc {
+    padding: 2.5rem 1rem 1rem 1rem;
+  }
   .contact-info-detail {
     font-size: 1.2rem;
     margin-top: 0.5rem;
@@ -972,15 +984,19 @@ section {
   .contact-form form {
     margin-left: 2rem;
   }
+  .contact-form form label {
+    font-size: 1.2rem;
+  }
+
   .contact-form form span {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
   .contact-form form input {
     width: 70%;
   }
   .contact-form form textarea {
     width: 80%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
   /* FIN CONTACT */
 }
