@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  padding-top: 10%;
+  margin-top: 2rem;
   overflow: hidden;
   user-select: none;
 }
@@ -124,6 +124,35 @@
     transform: scale(1);
   }
 }
+.about-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0rem;
+}
+.about-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+  gap: 0.3rem;
+}
+.about-item i {
+  font-size: 2.5rem;
+  color: var(--indigo-dye);
+  text-shadow: 0rem 0.1rem 0.2rem var(--aero);
+}
+.about-item h5 {
+  font-size: 1rem;
+  color: var(--indigo-dye);
+  text-shadow: 0rem 0.1rem 0.2rem var(--aero);
+}
+.about-item p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 #learnMoreBtn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -161,5 +190,9 @@
   }
   .about-content p {
     width: 60%;
+  }
+  .about-items {
+    width: 90%;
+    flex-direction: row;
   }
 }
