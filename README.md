@@ -18,5 +18,7 @@ El proyecto ha sido creado en conjunto por:
 
 ### Selecciona la imagen para ver:
 
-[![Dream Travels Mockup](https://github.com/user-attachments/assets/739117e1-f99c-4667-aff9-3cddd70e7909)](https://imsamudev.github.io/DreamTravels/)
+<a href="https://imsamudev.github.io/DreamTravels/" target="_blank">
+  <img src="https://github.com/user-attachments/assets/739117e1-f99c-4667-aff9-3cddd70e7909" alt="Dream Travels Mockup" />
+</a>
 
